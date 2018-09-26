@@ -1,0 +1,23 @@
+{% include 'overall_header.html' %}
+
+<a id="maincontent"></a>
+<h1>{{ lang('ACP_PHPBB_CUSTOMCSS_TITLE') }}</h1>
+<p>{{ lang('ACP_PHPBB_CUSTOMCSS_EXPLAIN') }}</p>
+
+<form id="phpbb_customcss" method="POST" action="{{ U_ACTION }}" >
+	<fieldset>
+		<legend>{{ lang('ACP_PHPBB_CUSTOMCSS_TITLE') }}</legend>
+
+		<dl>
+			<dt><label for="custom_css">{{ lang('CUSTOM_CSS') ~ lang('COLON') }}</label><br><span>{{ lang('CUSTOM_CSS_EXPLAIN') }}</span></dt>
+			<dd><textarea name="custom_css" id="custom_css" rows="20">{{ CUSTOM_CSS }}</textarea></dd>
+		</dl>
+	</fieldset>
+
+	<fieldset class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}">
+		<input class="button2" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}">
+	</fieldset>
+</form>
+
+{% include 'overall_footer.html' %}

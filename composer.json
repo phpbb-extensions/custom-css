@@ -1,0 +1,39 @@
+{
+	"name": "phpbb/customcss",
+	"type": "phpbb-extension",
+	"description": "An extension for phpBB that allows administrators to define custom CSS to be loaded on every page.",
+	"homepage": "https://www.phpbb.com",
+	"version": "1.0.0",
+	"keywords": ["phpbb", "extension", "CSS"],
+	"license": "GPL-2.0-only",
+	"authors": [
+		{
+			"name": "Jakub Senko",
+			"email": "jakubsenko@gmail.com",
+			"role": "Extension Developer"
+		},
+		{
+			"name": "Matt Friedman",
+			"homepage": "http://vsephpbb.github.io",
+			"role": "Extensions Development Team Lead"
+		}
+	],
+	"require": {
+		"php": ">=5.6",
+		"composer/installers": "~1.0"
+	},
+	"require-dev": {
+		"phing/phing": "2.4.*"
+	},
+	"extra": {
+		"display-name": "Custom CSS",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.2.0"
+		},
+		"version-check": {
+			"host": "www.phpbb.com",
+			"directory": "/customise/db/extension/custom-css",
+			"filename": "version_check"
+		}
+	}
+}
